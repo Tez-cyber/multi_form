@@ -4,10 +4,12 @@ export const FormHeader = ({ type, title, buttonText, desc, mini_desc }) => {
     return (
         <div className="">
             <h2 className={type === "auth" ? "text-2xl font-semibold" : "text-2xl font-semibold pb-2"}>{title}</h2>
-            <span className='pb-10 block text-sm text-gray-400'>
-                {desc}
-                <span className='pt-5 block'>{mini_desc}</span>
-            </span>
+            <div className={type === "auth" ? "hidden" : "block"}>
+                <span className='pb-10 block text-sm text-gray-400'>
+                    {desc}
+                    <span className='pt-5 block'>{mini_desc}</span>
+                </span>
+            </div>
             {/* <!-- ===== buttons --> */}
             <div className={type === "auth" ? "block" : "hidden"}>
                 <section className="py-10">
