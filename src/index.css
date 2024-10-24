@@ -6,6 +6,7 @@
   .inputItem {
     @apply border-bright border-[1.5px] border-solid w-full py-3 px-3 rounded-md placeholder:text-xs
   }
+
   .paleinputItem {
     @apply border-pale text-center text-pale hover:border-bright hover:text-bright border-[2px] w-[104px] border-solid py-2 px-1 rounded-md
   }
@@ -40,7 +41,39 @@
   }
 
   .btn {
-    @apply outline-none border-0 cursor-pointer text-base rounded-[4px] bg-bright text-white p-[4px_40px] active:outline-none active:scale-[.98]
+    @apply outline-none border-0 cursor-pointer text-base rounded-[4px] bg-bright text-white p-[10px_40px] active:outline-none active:scale-[.98]
+  }
+
+  /* custom checkboxes */
+  input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    @apply border-[0.15em_solid] border-bright grid place-content-center
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    /* box-shadow: inset 1em 1em var(--form-control-color); */
+    @apply bg-bright
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
   }
 }
 

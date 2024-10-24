@@ -2,9 +2,6 @@ import React from 'react'
 import { FormHeader } from '../FormHeader'
 
 export const SectionFirst = () => {
-    const title = `
-        Manage your courses and team in an easy way
-    `
     return (
         <>
             {/* <!-- === Top section === --> */}
@@ -40,16 +37,69 @@ export const SectionFirst = () => {
 }
 export const SectionSecond = () => {
     return (
-        <div>SectionSecond</div>
+        <>
+            {/* <!-- === Top section === --> */}
+            <FormHeader
+                desc="Who are you? What’s your company or organisation all about?"
+                title="Complete your company profile" />
+            {/* ============ Form */}
+            <form action="">
+                {/* <!-- ==== Email ==== --> */}
+                <div className="inputLabel">
+                    <label>Your Company Description</label>
+                    <input className="inputItem" type="text" placeholder="Tell me about what your company looks like" />
+                </div>
+                {/* <!-- ==== Second ==== --> */}
+                <div className="inputLabel">
+                    <label>Your Company Location</label>
+                    <input className="inputItem" type="text" placeholder="What is the address of your company" />
+                </div>
+            </form>
+        </>
     )
 }
 export const SectionThird = () => {
     return (
-        <div>SectionThird</div>
+        <>
+            {/* <!-- === Top section === --> */}
+            <FormHeader
+                desc="We want to know what’s your company interest"
+                title="What’s your company interest?" />
+            {/* ============ Form */}
+            <form action="">
+                {/* <!-- ==== Email ==== --> */}
+                <div className="flex flex-col gap-3">
+                    <div className="flex items-center">
+                        <input type="checkbox" className="border-none" name="" />
+                        <label className="text-sm ml-2 text-gray-400">
+                            To manage the tasks
+                        </label>
+                    </div>
+                    <div className="flex items-center">
+                        <input type="checkbox" className="border-none" name="" />
+                        <label className="text-sm ml-2 text-gray-400">
+                            To manage the projects
+                        </label>
+                    </div>
+                    <div className="flex items-center">
+                        <input type="checkbox" className="border-none" name="" />
+                        <label className="text-sm ml-2 text-gray-400">
+                        To manage the team
+                        </label>
+                    </div>
+                </div>
+                 {/* <!-- ==== Second ==== --> */}
+                 <div className="inputLabel my-10">
+                    <label>Other option</label>
+                    <input className="inputItem" type="text" placeholder="Input your option" />
+                </div>
+            </form>
+        </>
     )
 }
 export const SectionFourth = () => {
     return (
-        <div>SectionFourth</div>
+        <FormHeader
+                title="Registration completed" />
     )
 }

@@ -42,7 +42,7 @@ const Steps = () => {
         <>
             <div className="flex flex-col justify-center font-inter md:flex-row">
                 {/* <!-- Left Section --> */}
-                <FirstSection src="/Frame.png" />
+                <FirstSection src="/Illustration.png" />
                 {/* <!-- Right Section --> */}
                 <FormContainer>
                     {/* ====== Progress bar */}
@@ -67,7 +67,11 @@ const Steps = () => {
                     ">
                         <button
                             onClick={handleNext}
-                            className={`${steps === totalSteps ? "disabled" : "btn"}`}>Next</button>
+                            className="btn py-1">
+                                {
+                                    steps === totalSteps ? "Continue to dashboard" : "Next"
+                                }
+                            </button>
                     </div>
                 </FormContainer>
             </div>
