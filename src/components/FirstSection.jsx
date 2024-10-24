@@ -2,7 +2,7 @@ import React from 'react'
 
 export const FirstSection = ({ src, type }) => {
     return (
-        <section className=" bg-newGrey md:w-1/2">
+        <section className=" bg-newGrey h-full md:w-1/2">
             <div className="px-12 w-full py-[64px]">
                 <div className="">
                     {/* <!-- ========= Medium screen --> */}
