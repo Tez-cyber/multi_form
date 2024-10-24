@@ -2,6 +2,7 @@ import React from 'react'
 import { FirstSection } from './FirstSection'
 import { FormContainer } from './FormContainer'
 import { FormHeader } from './FormHeader'
+import { Link } from 'react-router-dom'
 
 export const SignIn = () => {
     return (
@@ -46,7 +47,7 @@ export const SignIn = () => {
                                 Doesn’t have an account?
                             </span>
                             <span className="text-bright font-bold">
-                                <a href="/signup">Sign up now</a>
+                                <Link to="/signup">Sign up now</Link>
                             </span>
                         </div>
                     </section>

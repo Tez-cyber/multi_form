@@ -2,6 +2,7 @@ import React from 'react'
 import { FirstSection } from './FirstSection'
 import { FormContainer } from './FormContainer'
 import { FormHeader } from './FormHeader'
+import { Link } from 'react-router-dom'
 
 export const Signup = () => {
     return (
@@ -14,14 +15,14 @@ export const Signup = () => {
                 <FormHeader buttonText="Sign up with google" type="auth" title="Sign up to Xepho" />
                 {/* <!-- ==== Form section ==== --> */}
                 <form action="" className="">
-                    <div class="flex gap-4">
-                        <div class="inputLabel w-1/2 ">
-                            <label for="">Full Name</label>
-                            <input class="inputItem" type="text" placeholder="Input your full name here" />
+                    <div className="flex gap-4">
+                        <div className="inputLabel w-1/2 ">
+                            <label>Full Name</label>
+                            <input className="inputItem" type="text" placeholder="Input your full name here" />
                         </div>
-                        <div class="inputLabel w-1/2">
-                            <label for="">Username</label>
-                            <input class="inputItem" type="text" placeholder="Input your username here" />
+                        <div className="inputLabel w-1/2">
+                            <label>Username</label>
+                            <input className="inputItem" type="text" placeholder="Input your username here" />
                         </div>
                     </div>
                     {/* <!-- ==== Email ==== --> */}
@@ -51,7 +52,7 @@ export const Signup = () => {
                                 Doesn’t have an account?
                             </span>
                             <span className="text-bright font-bold">
-                                <a href="/">Sign up now</a>
+                            <Link to="/">Sign in now</Link>
                             </span>
                         </div>
                     </section>
