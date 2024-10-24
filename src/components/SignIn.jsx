@@ -33,12 +33,12 @@ export const SignIn = () => {
                             </button>
                             <div className="flex gap-2">
                                 <div
-                                    className="border-bright border-[1.5px] border-solid px-2 flex items-center object-contain rounded-md ">
-                                    <img src="./assets/spin.png" alt="" />
+                                    className="spin">
+                                    <img src="/spin.png" alt="" />
                                 </div>
                                 <div
-                                    className="border-bright border-[1.5px] border-solid px-2 flex items-center object-contain rounded-md">
-                                    <img src="./assets/spin.png" alt="" />
+                                    className="spin">
+                                    <img src="/spin.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@ export const SignIn = () => {
                     <section className="my-10 flex flex-col items-center justify-between md:flex-row">
                         <button className="bg-bright rounded-md py-3 px-4 w-[192px] text-sm text-white">Sign in</button>
                         <div className="text-sm py-5">
-                            <span className="text-gray-400">
+                            <span className="text-gray-400 pr-2">
                                 Doesn’t have an account?
                             </span>
                             <span className="text-bright font-bold">
