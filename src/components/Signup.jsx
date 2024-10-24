@@ -43,9 +43,9 @@ export const Signup = () => {
                     </div>
                     {/* <!-- ====== Terms of service --> */}
                     <section className="flex items-center justify-between">
-                        <div className="">
-                            <input type="checkbox" className="mr-2 border-none" name="" />
-                            <label className="text-sm text-gray-400">
+                        <div className="flex items-center">
+                            <input type="checkbox" className="border-none" name="" />
+                            <label className="text-sm ml-2 text-gray-400">
                                 I have read and agree to the Terms of Service
                             </label>
                         </div>

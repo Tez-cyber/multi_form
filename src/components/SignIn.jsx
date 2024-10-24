@@ -27,15 +27,15 @@ export const SignIn = () => {
                     </div>
                     {/* <!-- ====== Terms of service --> */}
                     <section className="flex items-center justify-between">
-                        <div className="">
-                            <input type="checkbox" className="mr-2 border-none" name="" />
-                            <label className="text-sm text-gray-400">
+                        <div className="flex items-center">
+                            <input type="checkbox" className="border-none" name="" />
+                            <label className="text-sm ml-2 text-gray-400">
                                 remember me
                             </label>
                         </div>
                         <div className="text-sm">
                             <span className="text-gray-400">
-                                <a href="./password-reset.html" className="">forgot password?</a>
+                                <Link to="/forgot-password" className="">forgot password?</Link>
                             </span>
                         </div>
                     </section>
