@@ -6,6 +6,9 @@
   .inputItem {
     @apply border-bright border-[1.5px] border-solid w-full py-3 px-3 rounded-md placeholder:text-xs
   }
+  .paleinputItem {
+    @apply border-pale text-center text-pale hover:border-bright hover:text-bright border-[2px] w-[104px] border-solid py-2 px-1 rounded-md
+  }
 
   .inputLabel {
     @apply flex flex-col pb-5
@@ -14,9 +17,30 @@
   .inputLabel label {
     @apply text-sm font-bold pl-4 pb-2
   }
-  
+
   .spin {
     @apply border-bright border-[1.5px] border-solid px-2 flex items-center object-contain rounded-md
+  }
+
+  /* ============== Multi-step */
+  .circle {
+    @apply bg-[#ddd] h-[30px] w-[30px] flex justify-center items-center rounded-[50%] z-[1]
+  }
+
+  .circle.active {
+    @apply border-[#383838] text-[#fff] bg-bright
+  }
+
+  .disabled {
+    @apply outline-none border-0 cursor-not-allowed rounded-[4px] text-black bg-[#ddd] p-[4px_40px]
+  }
+
+  .progress {
+    @apply bg-bright absolute w-full top-1/2 left-0 -translate-y-1/2 h-1 z-[1] transition-[all_.8s_ease-in]
+  }
+
+  .btn {
+    @apply outline-none border-0 cursor-pointer text-base rounded-[4px] bg-bright text-white p-[4px_40px] active:outline-none active:scale-[.98]
   }
 }
 

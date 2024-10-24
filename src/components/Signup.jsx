@@ -2,9 +2,15 @@ import React from 'react'
 import { FirstSection } from './FirstSection'
 import { FormContainer } from './FormContainer'
 import { FormHeader } from './FormHeader'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const Signup = () => {
+    const navigate = useNavigate()
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        navigate('/multi')
+    }
     return (
         <div className="flex flex-col justify-center font-inter md:flex-row">
             {/* <!-- Left Section with Text and Image --> */}
@@ -14,7 +20,7 @@ export const Signup = () => {
                 {/* <!-- === Top section === --> */}
                 <FormHeader buttonText="Sign up with google" type="auth" title="Sign up to Xepho" />
                 {/* <!-- ==== Form section ==== --> */}
-                <form action="" className="">
+                <form onSubmit={handleSubmit} className="">
                     <div className="flex gap-4">
                         <div className="inputLabel w-1/2 ">
                             <label>Full Name</label>
@@ -46,7 +52,7 @@ export const Signup = () => {
                     </section>
                     {/* <!-- ============== Create  --> */}
                     <section className="my-10 flex flex-col items-center justify-between md:flex-row">
-                        <button className="bg-bright rounded-md py-3 px-4 w-[192px] text-sm text-white">Create account</button>
+                        <button type='submit' className="bg-bright rounded-md py-3 px-4 w-[192px] text-sm text-white">Create account</button>
                         <div className="text-sm py-5">
                             <span className="text-gray-400 pr-2">
                                 Doesn’t have an account?

@@ -1,11 +1,12 @@
 import React from 'react'
 
-export const FormHeader = ({ type, title, buttonText }) => {
+export const FormHeader = ({ type, title, buttonText, desc }) => {
     return (
         <div className="">
-            <h2 className={!type === "auth" ? "text-2xl font-semibold pb-10" : "text-2xl font-semibold"}>{title}</h2>
+            <h2 className={type === "auth" ? "text-2xl font-semibold" : "text-2xl font-semibold pb-2"}>{title}</h2>
+            <span className='pb-10 block text-sm text-gray-400'>{desc}</span>
             {/* <!-- ===== buttons --> */}
-            <div className={!type === "auth" ? "hidden" : "block"}>
+            <div className={type === "auth" ? "block" : "hidden"}>
                 <section className="py-10">
                     <div className="flex gap-4">
                         <button className="bg-bright rounded-md w-[60%] py-2 text-sm text-white">
